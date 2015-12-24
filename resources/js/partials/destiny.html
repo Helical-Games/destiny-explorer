@@ -1,0 +1,103 @@
+
+<ul class="collections" ng-mouseover="hideMenu()">
+			
+	<li ng-repeat="collection in grimoireData.themeCollection" context="grimoireData" class="collection" ng-mouseover="collectionSelected(collection, $event)" ng-click="collectionSelected(collection)"> 
+		<style>
+			.collectionBackground.type{{collection.themeId}}{
+				background-image: url({{bungieSiteRoot + collection.highResolution.smallImage.sheetPath}});
+				background-position-x: {{'-' + collection.highResolution.smallImage.rect.x + 'px'}};
+				background-position-y: {{'-' + collection.highResolution.smallImage.rect.y + 'px'}};
+				width: {{ collection.highResolution.smallImage.rect.width + 'px'}};
+				height: {{ collection.highResolution.smallImage.rect.height + 'px'}};
+			}
+		</style>
+
+		<a href="" class="text-label" ng-bind-html="collection.themeName"></a>
+		<div class="collectionBackground type{{collection.themeId}}"></div>
+
+    </li>
+</ul> 
+
+<div class="pages" style="display: none;">
+	<ul class="page-collection">
+		<li class="page" ng-repeat="page in selectedCollection.pageCollection" context="selectedCollection" ng-click="pageSelected(page)">
+			<style>
+				.pageBackground.type{{page.pageId}}{
+					background-image: url({{bungieSiteRoot + page.highResolution.smallImage.sheetPath}});
+					background-position-x: {{'-' + page.highResolution.smallImage.rect.x + 'px'}};
+					background-position-y: {{'-' + page.highResolution.smallImage.rect.y + 'px'}};
+					width: {{ page.highResolution.smallImage.rect.width + 'px'}};
+					height: {{ page.highResolution.smallImage.rect.height + 'px'}};
+				}
+			</style>
+
+			<a href="" class="text-label" ng-bind-html="page.pageName"></a>
+			<div class="pageBackground type{{page.pageId}}"></div>
+		</li>
+	</ul>
+</div>
+
+<div class="search" ng-mouseover="hideMenu()">
+	<input type="text" ng-model="searchTerm" ng-submit="search()"/>
+	<button ng-click="search()">Search</button>
+
+	<div id="resultsCounter" style="display: none;">
+		<div>Showing {{searchResults.length}} results</div>
+	</div>
+</div>
+
+<ul class="card-navigation scroll-container" style="" ng-mouseover="hideMenu()">
+	<li ng-repeat="card in selectedPage.cardCollection" context="selectdPage" class="card" >
+		<style>
+			.cardTumbnail.type{{card.cardId}}{
+				background-image: url({{bungieSiteRoot + card.normalResolution.smallImage.sheetPath}});
+				background-position-x: {{'-' + card.normalResolution.smallImage.rect.x + 'px'}};
+				background-position-y: {{'-' + card.normalResolution.smallImage.rect.y + 'px'}};
+				width: {{ card.normalResolution.smallImage.rect.width + 'px'}};
+				height: {{ card.normalResolution.smallImage.rect.height + 'px'}};
+			}
+		</style>
+		<div class="cardTumbnail type{{card.cardId}}"></div>
+		<a ng-href="#card{{card.cardId}}" class="text-label" ng-bind-html="card.cardName"></a>
+	</li>
+</ul>
+
+<div id="cardCollection" class="scroll-container">
+	<ul class="card-collection" style="" ng-mouseover="hideMenu()">
+		<li ng-repeat="card in selectedPage.cardCollection" context="selectdPage" class="card" name="card{{card.cardId}}">
+			<style>
+				.cardBackground.type{{card.cardId}}{
+					background-image: url({{bungieSiteRoot + card.highResolution.image.sheetPath}});
+					background-position-x: {{'-' + card.highResolution.image.rect.x + 'px'}};
+					background-position-y: {{'-' + card.highResolution.image.rect.y + 'px'}};
+					width: {{ card.highResolution.image.rect.width + 'px'}};
+					height: {{ card.highResolution.image.rect.height + 'px'}};
+				}
+			</style>
+			<div class="cardBackground type{{card.cardId}}">
+				<a href="" class="text-label" ng-bind-html="card.cardName"></a>
+			</div>
+			<div class="card-intro" ng-bind-html="card.cardIntro"></div>
+			<div class="card-description" ng-bind-html="card.cardDescription"></div>
+		</li>
+	</ul>
+</div>
+
+<ul id="searchResults" class="card-collection scroll-container" style="" ng-mouseover="hideMenu()">
+	<li ng-repeat="card in searchResults" context="searchResults" class="card">
+		<style>
+			.cardBackground.type{{card.cardId}}{
+				background-image: url({{bungieSiteRoot + card.normalResolution.smallImage.sheetPath}});
+				background-position-x: {{'-' + card.normalResolution.smallImage.rect.x + 'px'}};
+				background-position-y: {{'-' + card.normalResolution.smallImage.rect.y + 'px'}};
+				width: {{ card.normalResolution.smallImage.rect.width + 'px'}};
+				height: {{ card.normalResolution.smallImage.rect.height + 'px'}};
+			}
+		</style>
+		<div class="cardBackground type{{card.cardId}}"></div>
+		<a href="" class="text-label" ng-bind-html="card.cardName"></a>
+		<div class="card-intro" ng-bind-html="card.cardIntro"></div>
+		<div class="card-description" ng-bind-html="card.cardDescription"></div>
+		<a href="" class="card-link">View Full Card</a>
+	</li>
+</ul>

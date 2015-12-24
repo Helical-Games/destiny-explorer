@@ -1,0 +1,381 @@
+/* line 2, ../sass/screen.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 23, ../sass/screen.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 27, ../sass/screen.scss */
+body {
+  line-height: 1;
+}
+
+/* line 30, ../sass/screen.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 33, ../sass/screen.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 36, ../sass/screen.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 41, ../sass/screen.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* END CSS RESET */
+/* BEGIN FONTS*/
+@font-face {
+  font-family: wf_segoe-ui_normal;
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-Regular-final.eot");
+  /* IE9 Compat Modes */
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-Regular-final.ttf"), url("../../../../styles/fonts/SegoeUI/SegoeUI-Regular-final.eot?#iefix") format("embedded-opentype"), url("SegoeUI/SegoeUI-Regular-final.woff") format("woff"), url("SegoeUI/SegoeUI-Regular-final.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: wf_segoe-ui_light;
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-Light-final.eot");
+  /* IE9 Compat Modes */
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-Light-final.ttf"), url("../../../../styles/fonts/SegoeUI/SegoeUI-Light-final.eot?#iefix") format("embedded-opentype"), url("SegoeUI/SegoeUI-Light-final.woff") format("woff"), url("SegoeUI/SegoeUI-Light-final.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: wf_segoe-ui_semilight;
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiLight-final.eot");
+  /* IE9 Compat Modes */
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiLight-final.ttf"), url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiLight-final.eot?#iefix") format("embedded-opentype"), url("SegoeUI/SegoeUI-SemiLight-final.woff") format("woff"), url("SegoeUI/SegoeUI-SemiLight-final.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: wf_segoe-ui_bold;
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiBold-final.eot");
+  /* IE9 Compat Modes */
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiBold-final.ttf"), url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiBold-final.eot?#iefix") format("embedded-opentype"), url("SegoeUI/SegoeUI-SemiBold-final.woff") format("woff"), url("SegoeUI/SegoeUI-SemiBold-final.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: wf_segoe-ui_semibold;
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiBold-final.eot");
+  /* IE9 Compat Modes */
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiBold-final.ttf"), url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiBold-final.eot?#iefix") format("embedded-opentype"), url("SegoeUI/SegoeUI-SemiBold-final.woff") format("woff"), url("SegoeUI/SegoeUI-SemiBold-final.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+/* END FONTS */
+/* line 102, ../sass/screen.scss */
+body {
+  background-color: black;
+  overflow-x: hidden;
+  font-family: wf_segoe-ui_normal;
+}
+
+/* line 108, ../sass/screen.scss */
+.collections {
+  margin: 20px 0 0 20px;
+  cursor: pointer;
+  float: left;
+  width: 100%;
+}
+
+/* line 115, ../sass/screen.scss */
+.text-label {
+  color: #FFF;
+  position: absolute;
+  bottom: 6px;
+  left: 8px;
+  font-size: 14px;
+  right: 8px;
+  text-align: center;
+}
+
+/* line 125, ../sass/screen.scss */
+.text-label:hover {
+  color: gold;
+}
+
+/* line 129, ../sass/screen.scss */
+.pages .text-label {
+  bottom: 8px;
+}
+
+/* line 133, ../sass/screen.scss */
+.collectionBackground {
+  background-image: url(http://www.bungie.net/common/destiny_content/grimoire/images/themes-sprites_113f32d6872123b0c1d988ac607e7f85.jpg);
+  height: 419px;
+  width: 323px;
+}
+
+/* line 139, ../sass/screen.scss */
+.collection {
+  position: relative;
+  height: 161px;
+  float: left;
+  margin-right: 20px;
+  border: 1px solid transparent;
+}
+
+/* line 147, ../sass/screen.scss */
+.collection.selected {
+  border: 1px solid gold;
+  border-bottom: 1px solid black;
+  z-index: 3;
+}
+
+/* line 153, ../sass/screen.scss */
+.pages {
+  left: 20px;
+  border: 1px solid gold;
+  position: absolute;
+  top: 182px;
+  z-index: 2;
+  background-color: black;
+  padding: 0 10px 10px 0;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* line 164, ../sass/screen.scss */
+.page-collection li.page {
+  position: relative;
+  float: left;
+  margin: 10px 0 0 10px;
+  cursor: pointer;
+}
+
+/* line 171, ../sass/screen.scss */
+.pageBackground:hover {
+  background-color: rgba(0, 255, 255, 0.3);
+}
+
+/* line 175, ../sass/screen.scss */
+.scroll-container {
+  position: absolute;
+  left: 88px;
+  right: 20px;
+  bottom: 10px;
+  top: 264px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* line 185, ../sass/screen.scss */
+.card-navigation.scroll-container {
+  left: 20px;
+  width: 48px;
+  overflow-y: hidden;
+}
+
+/* line 191, ../sass/screen.scss */
+.card-navigation li {
+  position: relative;
+  height: 48px;
+  overflow: hidden;
+  width: 48px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-color: rgba(160, 140, 0, 0.2);
+}
+
+/* line 202, ../sass/screen.scss */
+.card-navigation:hover {
+  width: 300px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: auto;
+}
+
+/* line 209, ../sass/screen.scss */
+.card-navigation:hover li {
+  width: 295px;
+  background-color: rgba(228, 200, 112, 0.1);
+}
+
+/* line 214, ../sass/screen.scss */
+.card-navigation .cardTumbnail {
+  transform: scale(0.4);
+  position: absolute;
+  left: -20px;
+  float: left;
+  top: -19px;
+}
+
+/* line 222, ../sass/screen.scss */
+.card-navigation .text-label {
+  text-align: left;
+  top: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: auto;
+  margin-left: 0px;
+  height: 15px;
+  left: 48px;
+}
+
+/* line 233, ../sass/screen.scss */
+.card-collection li {
+  background-color: #EEE;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+/* line 239, ../sass/screen.scss */
+.card-collection .text-label {
+  top: 40px;
+}
+
+/* line 243, ../sass/screen.scss */
+.card-intro, .card-description {
+  margin-top: 10px;
+}
+
+/* line 247, ../sass/screen.scss */
+.card-intro {
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* line 252, ../sass/screen.scss */
+.cardBackground {
+  float: left;
+  position: relative;
+  margin-right: 20px;
+}
+
+/* line 258, ../sass/screen.scss */
+.cardBackground .text-label {
+  left: 32px;
+  font-size: 20px;
+  bottom: 32px;
+}
+
+/* line 264, ../sass/screen.scss */
+.card {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+/* line 270, ../sass/screen.scss */
+.search {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+}
+
+/* line 276, ../sass/screen.scss */
+#searchResults {
+  left: 20px;
+}
+
+/* line 280, ../sass/screen.scss */
+#searchResults .card-collection {
+  margin-bottom: 20px;
+}
+
+/* line 284, ../sass/screen.scss */
+#searchResults .card {
+  max-height: 122px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* line 292, ../sass/screen.scss */
+#searchResults .card-description {
+  height: 32px;
+  overflow: hidden;
+}
+
+/* line 297, ../sass/screen.scss */
+#searchResults .card-intro {
+  display: none;
+}
+
+/* line 301, ../sass/screen.scss */
+#searchResults .text-label {
+  color: #111;
+  position: relative;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* line 310, ../sass/screen.scss */
+#searchResults .card-link {
+  box-shadow: 0px -11px 12px rgba(238, 238, 238, 0.8);
+  background-color: #EEE;
+  width: 100%;
+  position: absolute;
+  bottom: 18px;
+  left: 124px;
+  right: 20px;
+}
+
+/* line 320, ../sass/screen.scss */
+input[type="text"] {
+  height: 20px;
+  margin: 0px;
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid #666;
+  color: #BBB;
+  width: 150px;
+}
+
+/* line 330, ../sass/screen.scss */
+input[type="text"]:focus {
+  border-color: gold;
+  color: gold;
+}
+
+/* line 335, ../sass/screen.scss */
+.search button {
+  background: none;
+  color: #222;
+  border: none;
+  background-color: #CAB94A;
+  margin: 4px;
+  line-height: 2em;
+  padding: 1px 20px;
+  font-weight: bold;
+}
+
+/* line 346, ../sass/screen.scss */
+#resultsCounter {
+  float: right;
+  margin: 10px;
+  color: #BBB;
+}

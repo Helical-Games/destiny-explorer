@@ -1,0 +1,350 @@
+//Eric Meyer's CSS reset
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* END CSS RESET */
+
+/* BEGIN FONTS*/
+$font-dir: "../../../../styles/fonts/";
+
+@font-face{
+	font-family: wf_segoe-ui_normal;
+	
+	src: url($font-dir + 'SegoeUI/SegoeUI-Regular-final.eot');/* IE9 Compat Modes */
+	src: url($font-dir + "SegoeUI/SegoeUI-Regular-final.ttf"),
+		url($font-dir + 'SegoeUI/SegoeUI-Regular-final.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('SegoeUI/SegoeUI-Regular-final.woff') format('woff'), /* Modern Browsers */
+	    url('SegoeUI/SegoeUI-Regular-final.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face{
+	font-family: wf_segoe-ui_light;
+	src: url($font-dir + 'SegoeUI/SegoeUI-Light-final.eot');/* IE9 Compat Modes */
+	src: url($font-dir + "SegoeUI/SegoeUI-Light-final.ttf"),
+		url($font-dir + 'SegoeUI/SegoeUI-Light-final.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('SegoeUI/SegoeUI-Light-final.woff') format('woff'), /* Modern Browsers */
+	    url('SegoeUI/SegoeUI-Light-final.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face{
+	font-family: wf_segoe-ui_semilight;
+
+	src: url($font-dir + 'SegoeUI/SegoeUI-SemiLight-final.eot');/* IE9 Compat Modes */
+	src: url($font-dir + "SegoeUI/SegoeUI-SemiLight-final.ttf"),
+		url($font-dir + 'SegoeUI/SegoeUI-SemiLight-final.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('SegoeUI/SegoeUI-SemiLight-final.woff') format('woff'), /* Modern Browsers */
+	    url('SegoeUI/SegoeUI-SemiLight-final.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face{
+	font-family: wf_segoe-ui_bold;
+	
+	src: url($font-dir + 'SegoeUI/SegoeUI-SemiBold-final.eot');/* IE9 Compat Modes */
+	src: url($font-dir + "SegoeUI/SegoeUI-SemiBold-final.ttf"),
+		url($font-dir + 'SegoeUI/SegoeUI-SemiBold-final.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('SegoeUI/SegoeUI-SemiBold-final.woff') format('woff'), /* Modern Browsers */
+	    url('SegoeUI/SegoeUI-SemiBold-final.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face{
+	font-family: wf_segoe-ui_semibold;
+	
+	src: url($font-dir + 'SegoeUI/SegoeUI-SemiBold-final.eot');/* IE9 Compat Modes */
+	src: url($font-dir + "SegoeUI/SegoeUI-SemiBold-final.ttf"),
+		url($font-dir + 'SegoeUI/SegoeUI-SemiBold-final.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('SegoeUI/SegoeUI-SemiBold-final.woff') format('woff'), /* Modern Browsers */
+	    url('SegoeUI/SegoeUI-SemiBold-final.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+/* END FONTS */
+
+body{
+	background-color: black;
+	overflow-x: hidden;
+	font-family: wf_segoe-ui_normal;
+}
+
+.collections{
+	margin: 20px 0 0 20px;
+    cursor: pointer;
+    float: left;
+    width: 100%;
+}
+
+.text-label{
+	color: #FFF;
+	position: absolute;
+	bottom: 6px;
+	left: 8px;
+	font-size: 14px;
+	right: 8px;
+	text-align: center;
+}
+
+.text-label:hover{
+	color: gold;
+}
+
+.pages .text-label{
+	bottom: 8px;
+}
+
+.collectionBackground{
+	background-image: url(http://www.bungie.net/common/destiny_content/grimoire/images/themes-sprites_113f32d6872123b0c1d988ac607e7f85.jpg);
+	height: 419px;
+	width: 323px;
+}
+
+.collection{
+	position: relative;
+	height: 161px;
+	float: left;
+	margin-right: 20px;
+	border: 1px solid transparent;
+}
+
+.collection.selected{
+	border: 1px solid gold;
+    border-bottom: 1px solid black;
+    z-index: 3;
+}
+
+.pages{
+	left: 20px;
+    border: 1px solid gold;
+    position: absolute;
+    top: 182px;
+    z-index: 2;
+    background-color: black;
+	padding: 0 10px 10px 0;
+	box-shadow: 0px 5px 12px rgba(0,0,0,0.4);
+}
+
+.page-collection li.page {
+    position: relative;
+    float: left;
+    margin: 10px 0 0 10px;
+    cursor: pointer;
+}
+
+.pageBackground:hover{
+	background-color: rgba(0, 255, 255, 0.3);
+}
+
+.scroll-container {
+    position: absolute;
+    left: 88px;
+    right: 20px;
+    bottom: 10px;
+    top: 264px	;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.card-navigation.scroll-container {
+    left: 20px;
+    width: 48px;
+    overflow-y: hidden;
+}
+
+.card-navigation li{
+	position: relative;
+	height: 48px;
+	overflow: hidden;
+	width: 48px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	border: 1px solid transparent;
+	background-color: rgba(160, 140, 0, 0.2);
+}
+
+.card-navigation:hover{
+	width: 300px;
+	z-index: 2;
+	background-color: rgba(0,0,0,0.9);
+	overflow-y: auto;
+}
+
+.card-navigation:hover li{
+	width: 295px;
+	background-color: rgba(228,200,112,0.1)
+}
+
+.card-navigation .cardTumbnail {
+    transform: scale(0.4);
+    position: absolute;
+    left: -20px;
+    float: left;
+    top: -19px;
+}
+
+.card-navigation .text-label{
+	text-align: left;
+	top: 15px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: auto;
+	margin-left: 0px;
+	height: 15px;
+	left: 48px;
+}
+
+.card-collection li{
+	background-color: #EEE;
+	padding: 20px;
+	margin-bottom: 40px;
+}
+
+.card-collection .text-label{
+	top: 40px;
+}
+
+.card-intro, .card-description{
+	margin-top: 10px;
+}
+
+.card-intro{
+	font-size: 14px;
+	font-style: italic;
+}
+
+.cardBackground{
+	float: left;
+	position: relative;
+	margin-right: 20px;
+}
+
+.cardBackground .text-label{
+	left: 32px;
+	font-size: 20px;
+	bottom: 32px;
+}
+
+.card{
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.search {
+    position: absolute;
+    top: 200px;
+    left: 20px;
+}
+
+#searchResults{
+	left: 20px;
+}
+
+#searchResults .card-collection{
+	margin-bottom: 20px;
+}
+
+#searchResults .card{
+	max-height: 122px;
+	overflow: hidden;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+#searchResults .card-description{
+	height: 32px;
+	overflow: hidden;
+}
+
+#searchResults .card-intro{
+	display: none;
+}
+
+#searchResults .text-label {
+    color: #111;
+    position: relative;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#searchResults .card-link{
+	box-shadow: 0px -11px 12px rgba(238,238,238,0.8);
+    background-color: #EEE;
+    width: 100%;
+    position: absolute;
+    bottom: 18px;
+    left: 124px;
+    right: 20px;
+}
+
+input[type="text"] {
+    height: 20px;
+    margin: 0px;
+    border-radius: 0;
+    background-color: transparent;
+    border: 1px solid #666;
+    color: #BBB;
+    width: 150px;
+}
+
+input[type="text"]:focus {
+    border-color: gold;
+    color: gold;
+}
+
+.search button {
+    background: none;
+    color: #222;
+    border: none;
+    background-color: #CAB94A;
+    margin: 4px;
+    line-height: 2em;
+    padding: 1px 20px;
+    font-weight: bold;
+}
+
+#resultsCounter {
+    float: right;
+    margin: 10px;
+    color: #BBB;
+}
