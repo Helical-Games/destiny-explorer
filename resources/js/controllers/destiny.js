@@ -63,7 +63,17 @@ destinyExplorer.controller('DestinyCtrl', function($scope, $sce, $rootScope, $ro
 
         
         scrollContainer.animate({
-                scrollTop: card.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop()
-            });
-        }
+            scrollTop: card.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop()
+        });
+    }
+
+    $scope.cardViewed = function(card){
+        $scope.selectedCard = card;
+
+        $('.lightbox').addClass('shown');
+    }
+
+    $scope.closeLightbox = function(){
+        $('.lightbox').removeClass('shown');
+    }
 });

@@ -12,7 +12,7 @@
 			}
 		</style>
 
-		<a href="" class="text-label" ng-bind-html="collection.themeName"></a>
+		<label class="text-label" ng-bind-html="collection.themeName"></label>
 		<div class="collectionBackground type{{collection.themeId}}"></div>
 
     </li>
@@ -31,19 +31,21 @@
 				}
 			</style>
 
-			<a href="" class="text-label" ng-bind-html="page.pageName"></a>
+			<label class="text-label" ng-bind-html="page.pageName"></label>
 			<div class="pageBackground type{{page.pageId}}"></div>
 		</li>
 	</ul>
 </div>
 
 <div class="search" ng-mouseover="hideMenu()">
-	<input type="text" ng-model="searchTerm" ng-submit="search()"/>
-	<button ng-click="search()">Search</button>
+	<form ng-submit="search()">
+		<input type="text" ng-model="searchTerm" ng-submit="search()"/>
+		<input type="submit"></input>
 
-	<div id="resultsCounter" style="display: none;">
-		<div>Showing {{searchResults.length}} results</div>
-	</div>
+		<div id="resultsCounter" style="display: none;">
+			<div>Showing {{searchResults.length}} results</div>
+		</div>
+	</form>
 </div>
 
 <ul class="card-navigation scroll-container" style="" ng-mouseover="hideMenu()">
@@ -75,7 +77,7 @@
 				}
 			</style>
 			<div class="cardBackground type{{card.cardId}}">
-				<a href="" class="text-label" ng-bind-html="card.cardName"></a>
+				<label class="text-label" ng-bind-html="card.cardName"></label>
 			</div>
 			<div class="card-intro" ng-bind-html="card.cardIntro"></div>
 			<div class="card-description" ng-bind-html="card.cardDescription"></div>
@@ -95,9 +97,33 @@
 			}
 		</style>
 		<div class="cardBackground type{{card.cardId}}"></div>
-		<a href="" class="text-label" ng-bind-html="card.cardName"></a>
+		<label class="text-label" ng-bind-html="card.cardName"></label>
 		<div class="card-intro" ng-bind-html="card.cardIntro"></div>
 		<div class="card-description" ng-bind-html="card.cardDescription"></div>
-		<a href="" class="card-link">View Full Card</a>
+		<a class="card-link" ng-click="cardViewed(card)">View Full Card</a>
 	</li>
 </ul>
+
+<div class="lightbox" ng-cick="closeLightbox()">
+	<div id="fullCardView" class="card lightbox-dialog">
+		<style>
+			.fullCardBackground.type{{selectedCard.cardId}}{
+				background-image: url({{bungieSiteRoot + selectedCard.highResolution.image.sheetPath}});
+				background-position-x: {{'-' + selectedCard.highResolution.image.rect.x + 'px'}};
+				background-position-y: {{'-' + selectedCard.highResolution.image.rect.y + 'px'}};
+				width: {{ selectedCard.highResolution.image.rect.width + 'px'}};
+				height: {{ selectedCard.highResolution.image.rect.height + 'px'}};
+			}
+		</style>
+
+		<div class="fullCardBackground type{{selectedCard.cardId}}">
+			<label class="text-label" ng-bind-html="selectedCard.cardName"></label>
+		</div>
+		<div class="card-intro" ng-bind-html="selectedCard.cardIntro"></div>
+		<div class="card-description" ng-bind-html="selectedCard.cardDescription"></div>
+		<div class="card-info">
+			
+		</div>
+		<div class="close-button" ng-click="closeLightbox()">x</div>
+	</div>
+</div>
