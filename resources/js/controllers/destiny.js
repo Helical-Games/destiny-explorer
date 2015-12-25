@@ -55,4 +55,15 @@ destinyExplorer.controller('DestinyCtrl', function($scope, $sce, $rootScope, $ro
     		$('.card-navigation').hide();
     	}
     }
+
+    $scope.cardSelected = function(cardId){
+        console.log('card selected ' + cardId);
+        var card = $('#card' + cardId);
+        var scrollContainer = $('#cardCollection');
+
+        
+        scrollContainer.animate({
+                scrollTop: card.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop()
+            });
+        }
 });

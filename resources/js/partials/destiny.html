@@ -47,7 +47,7 @@
 </div>
 
 <ul class="card-navigation scroll-container" style="" ng-mouseover="hideMenu()">
-	<li ng-repeat="card in selectedPage.cardCollection" context="selectdPage" class="card" >
+	<li ng-repeat="card in selectedPage.cardCollection" context="selectdPage" class="card" ng-click="cardSelected(card.cardId)">
 		<style>
 			.cardTumbnail.type{{card.cardId}}{
 				background-image: url({{bungieSiteRoot + card.normalResolution.smallImage.sheetPath}});
@@ -58,13 +58,13 @@
 			}
 		</style>
 		<div class="cardTumbnail type{{card.cardId}}"></div>
-		<a ng-href="#card{{card.cardId}}" class="text-label" ng-bind-html="card.cardName"></a>
+		<label class="text-label" ng-bind-html="card.cardName"></label>
 	</li>
 </ul>
 
 <div id="cardCollection" class="scroll-container">
 	<ul class="card-collection" style="" ng-mouseover="hideMenu()">
-		<li ng-repeat="card in selectedPage.cardCollection" context="selectdPage" class="card" name="card{{card.cardId}}">
+		<li id="card{{card.cardId}}" ng-repeat="card in selectedPage.cardCollection" context="selectdPage" class="card" name="card{{card.cardId}}">
 			<style>
 				.cardBackground.type{{card.cardId}}{
 					background-image: url({{bungieSiteRoot + card.highResolution.image.sheetPath}});
