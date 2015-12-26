@@ -1,0 +1,164 @@
+/* THEME COLORS */
+/* NEUTRAL COLORS */
+/* ACCENT COLORS */
+/*fonts*/
+@font-face {
+  font-family: wf_segoe-ui_normal;
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-Regular-final.eot");
+  /* IE9 Compat Modes */
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-Regular-final.ttf"), url("../../../../styles/fonts/SegoeUI/SegoeUI-Regular-final.eot?#iefix") format("embedded-opentype"), url("SegoeUI/SegoeUI-Regular-final.woff") format("woff"), url("SegoeUI/SegoeUI-Regular-final.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: wf_segoe-ui_light;
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-Light-final.eot");
+  /* IE9 Compat Modes */
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-Light-final.ttf"), url("../../../../styles/fonts/SegoeUI/SegoeUI-Light-final.eot?#iefix") format("embedded-opentype"), url("SegoeUI/SegoeUI-Light-final.woff") format("woff"), url("SegoeUI/SegoeUI-Light-final.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: wf_segoe-ui_semilight;
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiLight-final.eot");
+  /* IE9 Compat Modes */
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiLight-final.ttf"), url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiLight-final.eot?#iefix") format("embedded-opentype"), url("SegoeUI/SegoeUI-SemiLight-final.woff") format("woff"), url("SegoeUI/SegoeUI-SemiLight-final.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: wf_segoe-ui_bold;
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiBold-final.eot");
+  /* IE9 Compat Modes */
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiBold-final.ttf"), url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiBold-final.eot?#iefix") format("embedded-opentype"), url("SegoeUI/SegoeUI-SemiBold-final.woff") format("woff"), url("SegoeUI/SegoeUI-SemiBold-final.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: wf_segoe-ui_semibold;
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiBold-final.eot");
+  /* IE9 Compat Modes */
+  src: url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiBold-final.ttf"), url("../../../../styles/fonts/SegoeUI/SegoeUI-SemiBold-final.eot?#iefix") format("embedded-opentype"), url("SegoeUI/SegoeUI-SemiBold-final.woff") format("woff"), url("SegoeUI/SegoeUI-SemiBold-final.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: din_normal;
+  src: url("../../../../styles/fonts/DIN/DIN1451.eot");
+  /* IE9 Compat Modes */
+  src: url("../../../../styles/fonts/DIN/DIN1451.ttf"), url("../../../../styles/fonts/DIN/DIN1451.eot?#iefix") format("embedded-opentype"), url("DIN/DIN1451.woff") format("woff"), url("DIN/DIN1451.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: din_bold;
+  src: url("../../../../styles/fonts/DIN/DIN1451B.eot");
+  /* IE9 Compat Modes */
+  src: url("../../../../styles/fonts/DIN/DIN1451B.ttf"), url("../../../../styles/fonts/DIN/DIN1451B.eot?#iefix") format("embedded-opentype"), url("DIN/DIN1451B.woff") format("woff"), url("DIN/DIN1451B.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+/* line 119, ../sass/basil.scss */
+.btn, button, .ok-btn, input[type=button] {
+  font-family: wf_segoe-ui_semibold;
+  background-image: none;
+  box-shadow: none;
+  background-color: #C8C8C8;
+  padding: 6px 18px 6px 18px;
+  border: 2px solid #C8C8C8;
+  border-radius: 0;
+  text-shadow: none;
+  font-size: 14px;
+  width: auto;
+  line-height: 16px;
+  white-space: nowrap;
+  color: #000000;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+/* line 135, ../sass/basil.scss */
+.btn:hover, .btn:focus, .btn:active, .btn:active:hover, .btn:focus:hover, button:hover, button:focus, button:active, button:active:hover, button:focus:hover, .ok-btn:hover, .ok-btn:focus, .ok-btn:active, .ok-btn:active:hover, .ok-btn:focus:hover, input[type=button]:hover, input[type=button]:focus, input[type=button]:active, input[type=button]:active:hover, input[type=button]:focus:hover {
+  border-color: #000000;
+  background-color: #F4F4F4;
+  color: #000000;
+  outline: none;
+}
+/* line 143, ../sass/basil.scss */
+.btn:active, button:active, .ok-btn:active, input[type=button]:active {
+  background-color: #666666;
+  border-color: #666666;
+  color: #000000;
+}
+/* line 149, ../sass/basil.scss */
+.btn.primary, button.primary, .ok-btn.primary, input[type=button].primary {
+  background-color: #F2C811;
+  border-color: #F2C811;
+  color: #000000;
+}
+/* line 154, ../sass/basil.scss */
+.btn.primary:hover, .btn.primary:focus, .btn.primary:active, button.primary:hover, button.primary:focus, button.primary:active, .ok-btn.primary:hover, .ok-btn.primary:focus, .ok-btn.primary:active, input[type=button].primary:hover, input[type=button].primary:focus, input[type=button].primary:active {
+  border-color: #000000;
+  color: #000000;
+}
+/* line 159, ../sass/basil.scss */
+.btn.primary:focus, .btn.primary:active, button.primary:focus, button.primary:active, .ok-btn.primary:focus, .ok-btn.primary:active, input[type=button].primary:focus, input[type=button].primary:active {
+  border-color: #000000;
+  color: #000000;
+}
+/* line 163, ../sass/basil.scss */
+.btn.primary:focus:hover, .btn.primary:active:hover, button.primary:focus:hover, button.primary:active:hover, .ok-btn.primary:focus:hover, .ok-btn.primary:active:hover, input[type=button].primary:focus:hover, input[type=button].primary:active:hover {
+  background-color: #CDA521;
+}
+/* line 169, ../sass/basil.scss */
+.btn.disabled, .btn[disabled], .btn.disabled.primary, .btn[disabled].primary, button.disabled, button[disabled], button.disabled.primary, button[disabled].primary, .ok-btn.disabled, .ok-btn[disabled], .ok-btn.disabled.primary, .ok-btn[disabled].primary, input[type=button].disabled, input[type=button][disabled], input[type=button].disabled.primary, input[type=button][disabled].primary {
+  background-color: #F4F4F4;
+  border-color: #F4F4F4;
+  color: #A6A6A6;
+  cursor: default;
+}
+/* line 175, ../sass/basil.scss */
+.btn.disabled:hover, .btn.disabled:focus, .btn.disabled:active, .btn[disabled]:hover, .btn[disabled]:focus, .btn[disabled]:active, .btn.disabled.primary:hover, .btn.disabled.primary:focus, .btn.disabled.primary:active, .btn[disabled].primary:hover, .btn[disabled].primary:focus, .btn[disabled].primary:active, button.disabled:hover, button.disabled:focus, button.disabled:active, button[disabled]:hover, button[disabled]:focus, button[disabled]:active, button.disabled.primary:hover, button.disabled.primary:focus, button.disabled.primary:active, button[disabled].primary:hover, button[disabled].primary:focus, button[disabled].primary:active, .ok-btn.disabled:hover, .ok-btn.disabled:focus, .ok-btn.disabled:active, .ok-btn[disabled]:hover, .ok-btn[disabled]:focus, .ok-btn[disabled]:active, .ok-btn.disabled.primary:hover, .ok-btn.disabled.primary:focus, .ok-btn.disabled.primary:active, .ok-btn[disabled].primary:hover, .ok-btn[disabled].primary:focus, .ok-btn[disabled].primary:active, input[type=button].disabled:hover, input[type=button].disabled:focus, input[type=button].disabled:active, input[type=button][disabled]:hover, input[type=button][disabled]:focus, input[type=button][disabled]:active, input[type=button].disabled.primary:hover, input[type=button].disabled.primary:focus, input[type=button].disabled.primary:active, input[type=button][disabled].primary:hover, input[type=button][disabled].primary:focus, input[type=button][disabled].primary:active {
+  background-color: #F4F4F4;
+  border-color: #F4F4F4;
+  color: #A6A6A6;
+}
+/* line 182, ../sass/basil.scss */
+.btn.imgButton, button.imgButton, .ok-btn.imgButton, input[type=button].imgButton {
+  background-color: transparent;
+  border: 0px;
+  background-image: url("../../images/powerbi-sprites.png");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  padding: 0px;
+  outline: none;
+}
+/* line 192, ../sass/basil.scss */
+.btn.imgButton.addButton, button.imgButton.addButton, .ok-btn.imgButton.addButton, input[type=button].imgButton.addButton {
+  width: 16px;
+  height: 16px;
+  margin: 4px;
+  background-position: -20px -103px;
+}
+/* line 198, ../sass/basil.scss */
+.btn.imgButton.addButton:hover, button.imgButton.addButton:hover, .ok-btn.imgButton.addButton:hover, input[type=button].imgButton.addButton:hover {
+  background-position: -2px -103px;
+}
+/* line 203, ../sass/basil.scss */
+.btn.imgButton.resizeButton, button.imgButton.resizeButton, .ok-btn.imgButton.resizeButton, input[type=button].imgButton.resizeButton {
+  background-position: -54px -122px;
+}
+/* line 207, ../sass/basil.scss */
+.btn.imgButton.optionsButton, button.imgButton.optionsButton, .ok-btn.imgButton.optionsButton, input[type=button].imgButton.optionsButton {
+  opacity: 0.7;
+  background-position: -68px -2px;
+}
+/* line 211, ../sass/basil.scss */
+.btn.imgButton.optionsButton:focus, button.imgButton.optionsButton:focus, .ok-btn.imgButton.optionsButton:focus, input[type=button].imgButton.optionsButton:focus {
+  opacity: 1.0;
+  background-position: -48px -2px;
+  background-color: #333333;
+}
+/* line 217, ../sass/basil.scss */
+.btn.imgButton.optionsButton:active, button.imgButton.optionsButton:active, .ok-btn.imgButton.optionsButton:active, input[type=button].imgButton.optionsButton:active {
+  background-position: -48px -2px;
+}
+/* line 222, ../sass/basil.scss */
+.btn.imgButton.deleteButton, button.imgButton.deleteButton, .ok-btn.imgButton.deleteButton, input[type=button].imgButton.deleteButton {
+  width: 16px;
+  height: 16px;
+  margin: 4px;
+  background-position: -35px -24px;
+}
