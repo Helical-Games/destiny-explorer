@@ -39,7 +39,24 @@ destinyExplorer.controller('DestinyCtrl', function($scope, $sce, $rootScope, $ro
     }
 
     $scope.search = function(){
-    	$scope.searchResults = JSON.search($scope.grimoireData.themeCollection, '//*[contains(cardDescription, "'+ $scope.searchTerm +'")]');
+    	var snapshot = Defiant.getSnapshot($scope.grimoireData.themeCollection);
+        var searchTerms = $scope.searchTerm.split(' ');
+        var searchQuery = '//*[';
+        var searchPrefix = 'contains(cardDescription, "';
+
+        if($scope.searchTerm.indexOf('"') >= 0){
+            searchTerms = [$scope.searchTerm.replace(/['"]+/g, '')];
+        }
+
+        for (var i = searchTerms.length - 1; i >= 0; i--) {
+            searchQuery = searchQuery + searchPrefix + searchTerms[i] +'")';
+            searchPrefix = ' and ' + searchPrefix;
+        };
+        
+
+        searchQuery = searchQuery + ']';
+
+        $scope.searchResults = JSON.search(snapshot, searchQuery);
     	console.log($scope.searchResults);
 		$('#cardCollection').hide();
     	$scope.showHideSearchResults(true);
